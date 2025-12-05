@@ -1,0 +1,4 @@
+source;share/unitree_lidar_ros2/local_setup.bash
+source;share/unitree_lidar_ros2/local_setup.dsv
+source;share/unitree_lidar_ros2/local_setup.sh
+source;share/unitree_lidar_ros2/local_setup.zsh

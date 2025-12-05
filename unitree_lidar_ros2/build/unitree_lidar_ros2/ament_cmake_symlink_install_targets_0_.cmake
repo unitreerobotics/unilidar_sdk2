@@ -1,0 +1,1 @@
+ament_cmake_symlink_install_targets("TARGET_FILES" "/home/igo/Documents/GitHub/Sensor_Ros2_Lider/unilidar_sdk2/unitree_lidar_ros2/build/unitree_lidar_ros2/unitree_lidar_ros2_node" "TARGETS" "unitree_lidar_ros2_node" "DESTINATION" "lib/unitree_lidar_ros2")

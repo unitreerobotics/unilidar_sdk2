@@ -1,0 +1,53 @@
+[0.015s] Invoking command in '/home/igo/Documents/GitHub/Sensor_Ros2_Lider/unilidar_sdk2/unitree_lidar_ros2/build/unitree_lidar_ros2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/igo/Documents/GitHub/Sensor_Ros2_Lider/unilidar_sdk2/unitree_lidar_ros2/src/unitree_lidar_ros2 -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/igo/Documents/GitHub/Sensor_Ros2_Lider/unilidar_sdk2/unitree_lidar_ros2/install/unitree_lidar_ros2
+[0.090s] -- The C compiler identification is GNU 13.3.0
+[0.161s] -- The CXX compiler identification is GNU 13.3.0
+[0.184s] -- Detecting C compiler ABI info
+[0.349s] -- Detecting C compiler ABI info - done
+[0.365s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.366s] -- Detecting C compile features
+[0.366s] -- Detecting C compile features - done
+[0.383s] -- Detecting CXX compiler ABI info
+[0.598s] -- Detecting CXX compiler ABI info - done
+[0.618s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.619s] -- Detecting CXX compile features
+[0.620s] -- Detecting CXX compile features - done
+[0.630s] -- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.879s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[0.991s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[1.082s] -- Found rclcpp: 28.1.13 (/opt/ros/jazzy/share/rclcpp/cmake)
+[1.176s] -- Found rosidl_generator_c: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[1.218s] -- Found rosidl_generator_cpp: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[1.257s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.298s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.396s] -- Found rmw_implementation_cmake: 7.3.2 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[1.400s] -- Found rmw_fastrtps_cpp: 8.4.3 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[1.530s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  
+[1.555s] -- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+[1.585s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.674s] -- Found std_msgs: 5.3.6 (/opt/ros/jazzy/share/std_msgs/cmake)
+[1.691s] -- Found geometry_msgs: 5.3.6 (/opt/ros/jazzy/share/geometry_msgs/cmake)
+[1.709s] -- Found pcl_conversions: 2.6.2 (/opt/ros/jazzy/share/pcl_conversions/cmake)
+[1.845s] [33mCMake Warning (dev) at /usr/lib/x86_64-linux-gnu/cmake/pcl/Modules/FindFLANN.cmake:45 (find_package):
+[1.845s]   Policy CMP0144 is not set: find_package uses upper-case <PACKAGENAME>_ROOT
+[1.845s]   variables.  Run "cmake --help-policy CMP0144" for policy details.  Use the
+[1.845s]   cmake_policy command to set the policy and suppress this warning.
+[1.845s] 
+[1.845s]   CMake variable FLANN_ROOT is set to:
+[1.845s] 
+[1.845s]     /usr
+[1.845s] 
+[1.845s]   For compatibility, find_package is ignoring the variable, but code in a
+[1.845s]   .cmake module might still use it.
+[1.846s] Call Stack (most recent call first):
+[1.846s]   /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:261 (find_package)
+[1.846s]   /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:306 (find_flann)
+[1.846s]   /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:570 (find_external_library)
+[1.846s]   /opt/ros/jazzy/share/pcl_conversions/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+[1.846s]   /opt/ros/jazzy/share/pcl_conversions/cmake/pcl_conversionsConfig.cmake:41 (include)
+[1.846s]   CMakeLists.txt:22 (find_package)
+[1.846s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[1.846s] [0m
+[1.846s] -- Found flann version 1.9.2
+[2.270s] -- Found OpenMP_CXX: -fopenmp (found version "4.5") 
+[2.270s] -- Found OpenMP: TRUE (found version "4.5") found components: CXX 
+[3.332s] Invoked command in '/home/igo/Documents/GitHub/Sensor_Ros2_Lider/unilidar_sdk2/unitree_lidar_ros2/build/unitree_lidar_ros2' returned '-2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/igo/Documents/GitHub/Sensor_Ros2_Lider/unilidar_sdk2/unitree_lidar_ros2/src/unitree_lidar_ros2 -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/igo/Documents/GitHub/Sensor_Ros2_Lider/unilidar_sdk2/unitree_lidar_ros2/install/unitree_lidar_ros2

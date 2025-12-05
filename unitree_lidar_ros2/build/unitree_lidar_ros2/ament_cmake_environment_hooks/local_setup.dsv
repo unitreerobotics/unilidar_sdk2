@@ -1,0 +1,2 @@
+source;share/unitree_lidar_ros2/environment/ament_prefix_path.sh
+source;share/unitree_lidar_ros2/environment/path.sh

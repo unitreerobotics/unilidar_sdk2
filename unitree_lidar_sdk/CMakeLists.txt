@@ -37,3 +37,23 @@ add_executable(set_to_udp_mode
     examples/set_to_udp_mode.cpp
 )
 target_link_libraries(set_to_udp_mode  libunilidar_sdk2.a )
+
+add_executable(stop_lidar_rotation
+    examples/stop_lidar_rotation.cpp
+)
+target_link_libraries(stop_lidar_rotation  libunilidar_sdk2.a )
+
+add_executable(start_lidar_rotation
+    examples/start_lidar_rotation.cpp
+)
+target_link_libraries(start_lidar_rotation  libunilidar_sdk2.a )
+
+add_executable(set_wide_angle_fov
+    examples/set_wide_angle_fov.cpp
+)
+target_link_libraries(set_wide_angle_fov  libunilidar_sdk2.a )
+
+add_executable(set_standard_fov
+    examples/set_standard_fov.cpp
+)
+target_link_libraries(set_standard_fov  libunilidar_sdk2.a )

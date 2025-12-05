@@ -14,7 +14,7 @@ def generate_launch_description():
         parameters= [
                 
                 {'initialize_type': 2},
-                {'work_mode': 0},
+                {'work_mode': 1},  # Enable Wide-angle FOV (192° instead of 180°)
                 {'use_system_timestamp': True},
                 {'range_min': 0.0},
                 {'range_max': 100.0},
