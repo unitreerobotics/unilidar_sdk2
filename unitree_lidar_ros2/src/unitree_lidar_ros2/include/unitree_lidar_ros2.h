@@ -24,6 +24,7 @@
 
 #include "rclcpp/rclcpp.hpp"
 #include "rclcpp/time.hpp"
+#include "std_srvs/srv/trigger.hpp"
 
 #include "tf2_ros/transform_broadcaster.h"
 #include "tf2/LinearMath/Quaternion.h"
@@ -50,6 +51,8 @@ protected:
     rclcpp::Publisher<sensor_msgs::msg::Imu>::SharedPtr pub_imu_;
     rclcpp::TimerBase::SharedPtr timer_;
     std::shared_ptr<tf2_ros::TransformBroadcaster> broadcaster_;
+    rclcpp::Service<std_srvs::srv::Trigger>::SharedPtr srv_stop_rotation_;
+    rclcpp::Service<std_srvs::srv::Trigger>::SharedPtr srv_start_rotation_;
 
     // Unitree Lidar Reader
     UnitreeLidarReader *lsdk_;
@@ -153,6 +156,25 @@ UnitreeLidarSDKNode::UnitreeLidarSDKNode(const rclcpp::NodeOptions &options)
     pub_cloud_ = this->create_publisher<sensor_msgs::msg::PointCloud2>(cloud_topic_, 10);
     pub_imu_ = this->create_publisher<sensor_msgs::msg::Imu>(imu_topic_, 10);
     timer_ = this->create_wall_timer(std::chrono::milliseconds(1), std::bind(&UnitreeLidarSDKNode::timer_callback, this));
+
+    srv_stop_rotation_ = this->create_service<std_srvs::srv::Trigger>(
+        "~/stop_rotation",
+        [this](const std::shared_ptr<std_srvs::srv::Trigger::Request> /*request*/,
+               std::shared_ptr<std_srvs::srv::Trigger::Response> response)
+        {
+            lsdk_->stopLidarRotation();
+            response->success = true;
+            response->message = "Lidar rotation stopped";
+        });
+    srv_start_rotation_ = this->create_service<std_srvs::srv::Trigger>(
+        "~/start_rotation",
+        [this](const std::shared_ptr<std_srvs::srv::Trigger::Request> /*request*/,
+               std::shared_ptr<std_srvs::srv::Trigger::Response> response)
+        {
+            lsdk_->startLidarRotation();
+            response->success = true;
+            response->message = "Lidar rotation started";
+        });
 }
 
 void UnitreeLidarSDKNode::timer_callback()
