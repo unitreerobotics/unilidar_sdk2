@@ -165,8 +165,9 @@ void UnitreeLidarSDKNode::timer_callback()
     if (result == LIDAR_IMU_DATA_PACKET_TYPE)
     {
         LidarImuData imu;
-        lsdk_->getImuData(imu);
-
+        // Upstream bug: getImuData() was called twice, draining the queue
+        // before the publish path could see the message. Single-call form
+        // below uses the data from the same fetch the if() consumed.
         if (lsdk_->getImuData(imu))
         {
             // publish imu message
